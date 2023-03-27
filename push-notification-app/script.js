@@ -5,7 +5,6 @@ notificationCount.innerText = count;
 
 notify.addEventListener("click", () => {
   count = count + 1;
-  console.log(count);
   notificationCount.innerText = count;
 });
 
