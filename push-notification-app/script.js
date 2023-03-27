@@ -1,14 +1,25 @@
+//Model
+const countInc = () => {
+  count = count + 1;
+  return display();
+};
+
+const display = () => {
+  notificationCount.innerText = count;
+};
+
+//View
 let count = 0;
 const notify = document.querySelector(".notify");
 const notificationCount = document.querySelector(".notification-count");
-notificationCount.innerText = count;
+display();
 
+//Controller
 notify.addEventListener("click", () => {
-  count = count + 1;
-  notificationCount.innerText = count;
+  return countInc();
 });
 
 notificationCount.addEventListener("click", () => {
   count = 0;
-  notificationCount.innerText = count;
+  return display();
 });
