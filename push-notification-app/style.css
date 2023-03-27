@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+.main-container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(208, 233, 253);
+}
+.container {
+  /* background-color: rgb(235, 235, 235); */
+  padding: 20px;
+  position: relative;
+}
+.messenger {
+  text-align: center;
+}
+.messenger img {
+  width: 40px;
+  margin: 10px;
+}
+.notify {
+  display: block;
+  color: #fff;
+  background-color: rgb(22, 34, 110);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.notification-count {
+  color: #fff;
+  background-color: red;
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 20px;
+  top: 16px;
+  left: 85px;
+  cursor: pointer;
+}
