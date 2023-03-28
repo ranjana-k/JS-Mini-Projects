@@ -13,7 +13,6 @@
   background-color: rgb(208, 233, 253);
 }
 .container {
-  /* background-color: rgb(235, 235, 235); */
   padding: 20px;
   position: relative;
 }
@@ -24,23 +23,54 @@
   width: 40px;
   margin: 10px;
 }
-.notify {
+.notify-btn {
   display: block;
   color: #fff;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(22, 34, 110);
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.1s ease-out;
 }
 
-.notification-count {
-  color: #fff;
-  background-color: red;
+.notify-btn:hover {
+  background-color: #000;
+}
+
+.notification-count::before {
+  content: attr(data-count);
   position: absolute;
-  padding: 5px 10px;
+  top: 12%;
+  left: 52%;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(#ff1a1a, #ff0000, #e60000);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 6px 11px;
   border-radius: 20px;
-  top: 16px;
-  left: 85px;
   cursor: pointer;
+
+  opacity: 0;
+
+  z-index: 1;
+  transition: opacity 0.1s ease-out;
+  animation: animate 0.9s ease-out infinite alternate;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.09);
+  }
+}
+
+.notification-count.add-numb::before {
+  opacity: 1;
 }
